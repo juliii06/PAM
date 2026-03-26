@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Parcelas</title>
+  <script src="parcela2.js"></script>
+</head>
+<body>
+
+  <h2>calculadora de parcela</h2>
+
+  <input type="number" id="valor" placeholder="Digite o valor">
+
+  <select id="parcelas">
+    <option value="1">1x (à vista)</option>
+    <option value="3">3x (10% de acréscimo)</option>
+    <option value="5">5x (20% de acréscimo)</option>
+  </select>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div id="resultado"></div>
+
+</body>
+</html>
