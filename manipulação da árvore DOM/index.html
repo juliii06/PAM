@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Exercício 1</title>
+
+<style>
+    table{
+        border-collapse: collapse;
+        width: 400px;
+        text-align: center;
+    }
+
+    th, td{
+        border: 1px solid black;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .verde{
+        background-color: green;
+        color: white;
+    }
+</style>
+</head>
+
+<body>
+
+<table id="tabela">
+    <tr>
+        <th>Livro</th>
+        <th>Páginas</th>
+    </tr>
+
+    <tr>
+        <td>A Seleção</td>
+        <td>350</td>
+    </tr>
+
+    <tr>
+        <td>Harry Potter</td>
+        <td>500</td>
+    </tr>
+
+    <tr>
+        <td>Dom Casmurro</td>
+        <td>200</td>
+    </tr>
+
+    <tr>
+        <td>O Pequeno Príncipe</td>
+        <td>150</td>
+    </tr>
+</table>
+
+<script>
+
+let tabela = document.getElementById("tabela");
+let linhas = tabela.rows;
+
+for(let i = 1; i < linhas.length; i++){
+
+    let colunaLivro = linhas[i].cells[0];
+
+    colunaLivro.onclick = function(){
+
+        if(colunaLivro.classList.contains("verde")){
+            colunaLivro.classList.remove("verde");
+        }else{
+            colunaLivro.classList.add("verde");
+        }
+
+    }
+}
+
+</script>
+
+</body>
+</html>
